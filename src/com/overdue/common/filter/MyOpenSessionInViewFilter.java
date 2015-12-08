@@ -23,7 +23,7 @@ import org.springframework.web.context.request.async.WebAsyncUtils;
 public class MyOpenSessionInViewFilter extends OpenSessionInViewFilter {
 
 	public Session openSession(SessionFactory sessionFactory) throws DataAccessResourceFailureException {
-		try {
+		try {  
 			Session session = sessionFactory.openSession();
 			session.setFlushMode(FlushMode.AUTO);
 			return session;
